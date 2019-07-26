@@ -2,7 +2,7 @@
 ### BUILD image
 FROM ubuntu:18.04
 
-RUN apt-get update && apt-get upgrade
+RUN apt-get update && apt-get upgrade -y
 
 FROM maven:3-jdk-11 as builder
 #Copy Custom Maven settings
@@ -12,7 +12,7 @@ RUN mkdir -p /build
 WORKDIR /build
 COPY pom.xml /build
 #Download all required dependencies into one layer
-RUN mvn -B dependency:resolve dependency:resolve-plugins
+RUN mvn -B dependency:resolve dependency:resolve-plugins 
 #RUN mvn dependency:resolve-plugins
 #Copy source code
 COPY src /build/src
