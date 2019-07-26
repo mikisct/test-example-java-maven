@@ -3,6 +3,7 @@
 FROM ubuntu:18.04
 
 RUN apt-get update && apt-get upgrade -y
+RUN apt-get install -y curl git
 
 FROM maven:3-jdk-11 as builder
 #Copy Custom Maven settings
