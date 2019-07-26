@@ -1,4 +1,9 @@
+
 ### BUILD image
+FROM ubuntu:18.04
+
+RUN apt-get update && apt-get upgrade
+
 FROM maven:3-jdk-11 as builder
 #Copy Custom Maven settings
 #COPY settings.xml /root/.m2/
