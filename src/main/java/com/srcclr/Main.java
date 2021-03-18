@@ -19,6 +19,7 @@ public class Main {
 
     // Update Advisor: changed in the upgrade from Spring Web 3.1.1.RELEASE to 3.2.15.RELEASE
     UriUtils.encodeFragment("", "");
+    System.out.println("Hello, World!");
   }
 
   private static void filterXMLSignature() {
@@ -27,5 +28,7 @@ public class Main {
     new MultipartStream(new ByteArrayInputStream(bytes), bytes);
 
     new XMLSignatureInput(bytes).addNodeFilter(null);
+
+    print
   }
 }
