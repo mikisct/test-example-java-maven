@@ -24,6 +24,7 @@ public class Main {
   private static void filterXMLSignature() {
     byte[] bytes = new byte[256];
     // testing1234
+    // huhu
     new MultipartStream(new ByteArrayInputStream(bytes), bytes);
 
     new XMLSignatureInput(bytes).addNodeFilter(null);
