@@ -23,7 +23,7 @@ public class Main {
 
   private static void filterXMLSignature() {
     byte[] bytes = new byte[256];
-    // testing123
+    // testing1234
     new MultipartStream(new ByteArrayInputStream(bytes), bytes);
 
     new XMLSignatureInput(bytes).addNodeFilter(null);
